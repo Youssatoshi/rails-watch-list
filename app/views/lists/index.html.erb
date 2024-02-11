@@ -13,8 +13,7 @@
       <% @lists.each do |list| %>
         <div class="col-12 col-sm-6 col-md-4 mb-3">
           <%= link_to list_path(list), class: "text-decoration-none", style: "color: white; font-size: 20px; text-decoration: none;" do %>
-            <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>); background-size: cover; background-position: center; width: 100%; height: 300px; display: flex; justify-content: center; align-items: center;">
-
+           <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>); background-size: cover; background-position: center; width: 100%; height: 300px; display: flex; justify-content: center; align-items: center;">
               <%= list.name %>
             </div>
           <% end %>

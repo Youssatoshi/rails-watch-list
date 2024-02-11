@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('list_background.jpg') %>); width: 100%; height: 300px; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; color: white; font-size: 24px; font-weight: bold; padding: 20px;">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@list.photo.key) %>); width: 100%; height: 300px; display: flex; justify-content: center; align-items: center; background-size: cover; background-position: center; color: white; font-size: 24px; font-weight: bold; padding: 20px;">
   <h1><%= @list.name %></h1> </div>
   <span class="movie-tag"><%= pluralize(@list.movies.size, "movie") %></span>
   </div>
